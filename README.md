@@ -106,3 +106,63 @@ vku-study-room-booking/
   - Sinh mã vé duy nhất theo cú pháp `VKU-[ROOM]-[YYYYMMDD]-[SLOT]-[RANDOM]`.
   - Hàm `getSlotStatus` trả về 3 trạng thái phân biệt rõ ràng: `available` (Xanh lá - Còn trống), `mine` (Xanh dương - Của bạn) và `booked` (Đỏ - Đã có người khác đặt).
   - Cung cấp tính năng chuyển đổi 3 sinh viên demo trong màn hình Tài khoản để kiểm chứng trực tiếp khả năng khóa ca chéo giữa các sinh viên.
+
+---
+
+## 6. PROJECT SETUP & EXECUTION GUIDE (HƯỚNG DẪN CÀI ĐẶT & KHỞI CHẠY)
+
+### 6.1. Yêu cầu môi trường (Prerequisites)
+* **Node.js**: Phiên bản LTS (`v18.x`, `v20.x` hoặc `v22+`)
+* **NPM**: `v9.x` trở lên (hoặc `yarn` / `bun`)
+* **Thiết bị chạy thử**: Điện thoại cài đặt ứng dụng **Expo Go** (tải miễn phí trên [Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent) hoặc [App Store](https://apps.apple.com/app/expo-go/id982107779)).
+
+---
+
+### 6.2. Các bước cài đặt mã nguồn (Installation Steps)
+
+```bash
+# Bước 1: Sao chép repository từ GitHub về máy
+git clone https://github.com/vule0309/vku-study-room.git
+
+# Bước 2: Di chuyển vào thư mục dự án
+cd vku-study-room
+
+# Bước 3: Cài đặt toàn bộ các thư viện dependencies
+npm install
+
+# Bước 4: Kiểm tra tính toàn vẹn của mã nguồn TypeScript (kỳ vọng 0 lỗi)
+npx tsc --noEmit
+```
+
+---
+
+### 6.3. Khởi chạy ứng dụng (Running the App)
+
+#### Lựa chọn A: Khởi chạy trong mạng nội bộ (Cùng mạng Wi-Fi)
+```bash
+npm start
+# hoặc
+npx expo start
+```
+
+#### Lựa chọn B: Khởi chạy chế độ Tunnel (Kết nối từ xa qua Internet - Khuyên dùng)
+```bash
+npx expo start --tunnel
+```
+
+---
+
+### 6.4. Hướng dẫn mở ứng dụng trên thiết bị
+
+* **Trên điện thoại Android**:
+  1. Mở ứng dụng **Expo Go**.
+  2. Bấm vào **Scan QR code** và hướng camera quét mã QR hiển thị trên màn hình Terminal.
+  3. Hoặc bấm **Enter URL manually** và nhập đường link dạng `exp://...`.
+* **Trên điện thoại iOS (iPhone)**:
+  1. Mở ứng dụng **Camera (Máy ảnh)** mặc định của iPhone.
+  2. Quét mã QR trên Terminal ➜ Nhấn vào thông báo vàng **Open in Expo Go**.
+* **Trên trình duyệt máy tính**:
+  1. Nhấn phím `w` trên Terminal để mở phiên bản Web trên `http://localhost:8081`.
+* **Trải nghiệm trực tiếp 24/7 không cần cài đặt**:
+  - Truy cập đường link Expo Snack chính thức: [https://snack.expo.dev/@vule0709/vku-studyspace-booking](https://snack.expo.dev/@vule0709/vku-studyspace-booking)
+
