@@ -1,6 +1,4 @@
 import { create } from 'zustand';
-import { persist, createJSONStorage } from 'zustand/middleware';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Booking, BookingStatus, SlotStatus, UserProfile } from '../types/booking';
 import { TIME_SLOTS, formatDateToYYYYMMDD, getCurrentSlot, isSlotExpired } from '../utils/dateUtils';
 import { generateBookingReference } from '../utils/qrUtils';
@@ -200,9 +198,7 @@ export interface BookingState {
   resetToDefaultSeed: () => void;
 }
 
-export const useBookingStore = create<BookingState>()(
-  persist(
-    (set, get) => ({
+export const useBookingStore = create<BookingState>((set, get) => ({
       currentUser: DEFAULT_USER,
       bookings: generateInitialSeedBookings(),
       hasInitializedSeed: true,
@@ -390,10 +386,4 @@ export const useBookingStore = create<BookingState>()(
           currentUser: DEFAULT_USER,
         });
       },
-    }),
-    {
-      name: 'vku-booking-storage-v1',
-      storage: createJSONStorage(() => AsyncStorage),
-    }
-  )
-);
+}));

@@ -9,7 +9,7 @@
 ## 1. GENERAL INFORMATION & DELIVERABLE LINKS
 * **Team Members:**
   1. Lê Hoàng Vũ — Student ID: 23IT.B249 — Class: 23GITB — Role: Fullstack Mobile Development & State Architecture — Contribution: 100%
-* **🔗 Live Demo URL:** Expo Go Tunnel: `exp://ivqlifm-anonymous-8081.exp.direct`
+* **🔗 Live Demo URL (Expo Snack 24/7):** https://snack.expo.dev/@vule0709/vku-studyspace-booking 
 * **💻 GitHub Repository:** https://github.com/vule0309/vku-study-room
 
 
